@@ -1,6 +1,7 @@
 const {Sequelize} = require('sequelize')
 
-module.exports = new Sequelize(
+//create sequelize object
+const sequelize =  new Sequelize(
     'online-store', // DB name
     process.env.DB_USER, // User
     process.env.DB_PASSWORD, // Пароль
@@ -10,3 +11,5 @@ module.exports = new Sequelize(
         port: process.env.DB_PORT,
     }
 )
+
+module.exports = sequelize
