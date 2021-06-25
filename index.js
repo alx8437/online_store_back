@@ -16,9 +16,6 @@ app.use(express.json())
 //added router
 app.use('/api', router)
 
-app.get('/', (req, res) => {
-    res.status(200).json({message: 'WORKING'})
-})
 
 const start = async () => {
     try {
