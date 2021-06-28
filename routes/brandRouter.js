@@ -1,12 +1,14 @@
 const Router = require('express')
+const brandController = require('../controllers/brandController')
 
 //create router object
 const router = new Router()
 
-router.post('/')
-router.get('/')
+router.post('/', brandController.create)
+router.get('/', brandController.getAll)
 
-//Delete method should be add
+// TODO: Delete method should be add
+
 
 module.exports = router
 
